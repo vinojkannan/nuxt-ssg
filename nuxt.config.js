@@ -76,9 +76,6 @@ export default {
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    treeShake: {
-      loaderOptions: { registerStylesSSR: true },
-    },
     theme: {
       dark: true,
       themes: {
@@ -98,9 +95,5 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {
-    loaders: {
-      vueStyle: { manualInject: true },
-    },
-  },
+  build: {},
 }
