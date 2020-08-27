@@ -1,22 +1,16 @@
 <template>
   <div>
-    <h1 style="text-align: center">VUE SSG - Jokes</h1>
-    <v-container>
-      <v-list three-line>
-        <template v-for="(category, index) in categories">
-          <v-divider :key="index"></v-divider>
-          <v-list-item :key="category">
-            <v-list-item-content>
-              <v-list-item-title>
-                <NuxtLink :to="{ path: `jokes/${category}` }">
-                  {{ category }}
-                </NuxtLink>
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </template>
-      </v-list>
-    </v-container>
+    <h1 style="text-align: center">Nuxt SSG - Jokes</h1>
+    <ul>
+      <template v-for="(category, index) in categories">
+        <hr :key="index" />
+        <li :key="index">
+          <NuxtLink :to="{ path: `jokes/${category}` }">
+            {{ category }}
+          </NuxtLink>
+        </li>
+      </template>
+    </ul>
   </div>
 </template>
 
@@ -34,3 +28,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+ul {
+  padding: 100px;
+  list-style-type: none;
+}
+li {
+  padding: 20px;
+  text-align: center;
+}
+</style>
